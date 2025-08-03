@@ -23,11 +23,7 @@ print(f"\nRestful? {records[2].is_restful()}")
 print()
 
 # Analytics
-
-
-avgDuration = overall_average_duration(records)
-print("Overall average duration:", avgDuration)
-# print(f"22222:  {avgDuration > 7}")
+print("Overall average duration:", overall_average_duration(records))
 
 print("Best sleep day (by score):", best_sleep_day(records))
 

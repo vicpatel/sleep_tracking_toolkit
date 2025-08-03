@@ -1,12 +1,7 @@
-
 import unittest
-from sleep_tracking_toolkit.record import DailySleepRecord
-from sleep_tracking_toolkit.utils import compute_sleep_score, quality_label, normalize_quality
-from sleep_tracking_toolkit.analytics import (
-    overall_average_duration, best_sleep_day,
-    detect_under_sleep_days, detect_spike,
-    duration_trend, average_sleep_score_across_days
-)
+from analytics import *
+from record import DailySleepRecord
+from utils import compute_sleep_score, quality_label, normalize_quality
 
 class TestSleepTracking(unittest.TestCase):
 
@@ -73,6 +68,7 @@ class TestSleepTracking(unittest.TestCase):
     def test_average_sleep_score_across_days(self):
         avg = average_sleep_score_across_days(self.records)
         self.assertGreater(avg, 0)
+
 
 if __name__ == '__main__':
     unittest.main()
